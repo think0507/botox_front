@@ -1,21 +1,23 @@
-import React from 'react';
+// RoomListContent.js
+
+import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
-import './RoomListContent.css'
+import './RoomListContent.css';
 import lollLogo from '../img/lol-logo.png';
 import lockedIcon from '../img/icons8-locked-48.png';
 import unlockedIcon from '../img/icons8-unlocked-48.png';
 
-const RoomListContent = ({ room }) => {
+const RoomListContent = ({ room, onClick }) => {
     let { roomNum, roomName, peopleCount, degreeAvg, isLocked, isVoiceChat } = room;
     const navigate = useNavigate();
-
+    const [isVoiceChatChecked, setIsVoiceChatChecked] = useState(false);
     // ****************덤프******************
     roomNum = 100240;
     roomName = '같이 5인큐 하실분~~!';
     peopleCount = 3;
     degreeAvg = 4.5;
     isLocked = false;
-    isVoiceChat = true;
+    isVoiceChat = isVoiceChatChecked;
     // ------------------------------------
     let gameName = "League of legends";
     let maxPeopleCount = 5;
@@ -23,19 +25,15 @@ const RoomListContent = ({ room }) => {
     // ****************덤프 끝******************
 
     const lockedCheck = () => {
-        if (isLocked) {
-            return lockedIcon;
-        } else {
-            return unlockedIcon;
-        }
+        return isLocked ? lockedIcon : unlockedIcon;
     }
 
     const handleClick = () => {
-        if (isVoiceChat) {
-            navigate('/VoiceChatRoom');
-        } else {
-            navigate('/TextChatRoom');
-        }
+        onClick(isVoiceChat);
+    };
+
+    const handleVoiceChatCheck = () => {
+        setIsVoiceChatChecked(!isVoiceChatChecked); // 체크 상태 토글
     };
 
     return (

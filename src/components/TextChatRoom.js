@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import './TextChatRoom.css';
 import Message from '../img/message.png';
 import egg from '../img/egg.png';
+import { useNavigate } from "react-router-dom";
 
 const Chat = (function () {
     const myName = "blue";
-
     function init() {
         document.addEventListener('keydown', function (e) {
             if (e.keyCode === 13 && !e.shiftKey) {
@@ -109,13 +109,14 @@ const TextChatRoom = () => {
     };
 
     const handleExit = () => {
-        // 나가기 버튼 클릭 시 동작할 코드 작성
+        navigate("/RoomList");
     };
 
     const handleReport = () => {
         // 신고하기 버튼 클릭 시 동작할 코드 작성
     };
 
+    const navigate = useNavigate();
     return (
         <div className="chat_wrap">
             <img className="message_img" src={Message} alt="message"/>

@@ -1,8 +1,9 @@
 .navbar {
     width: 100%;
     background-color : #393939;
-    padding: 15px 0px;
+    padding: 15px;
     text-align: right;
+    margin-top: -10px;
 }
 
 .navbarMenu {

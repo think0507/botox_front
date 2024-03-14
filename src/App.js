@@ -9,6 +9,8 @@ import TextChatRoom from "./components/TextChatRoom";
 import VoiceChatRoom from "./components/VoiceChatRoom";
 import Board from "./components/Board";
 import Signup from "./components/Signup";
+import Write from "./components/Write";
+import { PostProvider } from './components/PostContext'; // PostProvider import
 
 function App() {
     return (
@@ -16,14 +18,16 @@ function App() {
             <div className="App">
                 <Nav />
                 <Routes>
-                    <Route path="/" element={<Main />}/>
-                    <Route path="/Board" element={<Board />}/>
-                    <Route path="/RoomList" element={<RoomList />}/>
-                    <Route path="/Signup" element={<Signup />}/>
-                    <Route path="/Login" element={<Login />}/>
-                    <Route path="/:gameName" element={<MainGameComponents />}/>
-                    <Route path="/TextChatRoom" element={<TextChatRoom />}/>
-                    <Route path="/VoiceChatRoom" element={<VoiceChatRoom />}/>
+                    <Route path="/" element={<Main />} />
+                    <Route path="/Board" element={<PostProvider><Board /></PostProvider>} />
+                    <Route path="/RoomList" element={<RoomList />} />
+                    <Route path="/Signup" element={<Signup />} />
+                    <Route path="/Login" element={<Login />} />
+                    {/* PostProvider로 Write 컴포넌트 감싸기 */}
+                    <Route path="/Write" element={<PostProvider><Write /></PostProvider>} />
+                    <Route path="/:gameName" element={<MainGameComponents />} />
+                    <Route path="/TextChatRoom" element={<TextChatRoom />} />
+                    <Route path="/VoiceChatRoom" element={<VoiceChatRoom />} />
                 </Routes>
             </div>
         </BrowserRouter>

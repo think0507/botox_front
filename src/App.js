@@ -16,11 +16,9 @@ function App() {
     return (
         <BrowserRouter>
             <div className="App">
-                <Nav />
                 <Routes>
                     <Route path="/" element={<Main />} />
                     <Route path="/Board" element={<PostProvider><Board /></PostProvider>} />
-                    <Route path="/RoomList" element={<RoomList />} />
                     <Route path="/Signup" element={<Signup />} />
                     <Route path="/Login" element={<Login />} />
                     {/* PostProvider로 Write 컴포넌트 감싸기 */}
@@ -28,6 +26,7 @@ function App() {
                     <Route path="/:gameName" element={<MainGameComponents />} />
                     <Route path="/TextChatRoom" element={<TextChatRoom />} />
                     <Route path="/VoiceChatRoom" element={<VoiceChatRoom />} />
+                    <Route path="/RoomList" element={<RoomList />} />
                 </Routes>
             </div>
         </BrowserRouter>

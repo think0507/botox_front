@@ -15,8 +15,6 @@ function MainGameComponents() {
 
     return (
         <div>
-            <h2>{gameName}</h2>
-            <p>{gameInfo[gameName]}</p>
             <RoomList />
         </div>
     );

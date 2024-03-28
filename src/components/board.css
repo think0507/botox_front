@@ -2,6 +2,11 @@
     background-color: #2c2c2c;
 }
 
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
 .container {
     width: 90%;
     height: 100%;
@@ -36,10 +41,12 @@
     width: 20px;
     height: 20px;
 }
+.main-content{
+    margin-top: -25px;
+}
 #board_title {
     margin-left: 250px;
-    padding: 5px;
-    margin-top: -10px;
+    padding: 20px;
     color: white;
 }
 

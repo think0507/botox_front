@@ -9,3 +9,19 @@
   z-index: 1000;
   overflow-y: auto;
 }
+
+ul{
+  list-style-type: square;
+}
+.plus-button{
+  list-style-type: none;
+}
+
+.state {
+  color: greenyellow;
+}
+
+.plus-friend{
+  width: 40px;
+  margin-left: 150px;
+}

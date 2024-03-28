@@ -7,6 +7,7 @@ import lolLogo from "../img/lol-logo.png";
 import suddenLogo from "../img/sudden.png";
 import userIcon from "../img/user-icon.png";
 import logoImg from "../img/logo-img.png";
+import Nav from "../Nav";
 
 function Main() {
     const [userCount, setUserCount] = useState(0);
@@ -26,6 +27,7 @@ function Main() {
 
     return (
         <div className='Main'>
+            <Nav/>
             <div className='logoImgContainer'>
                 <img className="logo" src={logoImg} alt={"logo"}></img>
             </div>

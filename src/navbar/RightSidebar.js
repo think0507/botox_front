@@ -1,26 +1,25 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import './RightSidebar.css';
-
+import Plus from "../img/plus.png"
 
 const RightSidebar = () => {
   return (
     <div className='RightSidebar'>
-        <ul>
+        <ul className="plus-button">
             <li>
-                <img width="48" height="48"
-                     src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/48/external-add-user-tanah-basah-basic-outline-tanah-basah-2.png"
-                     alt="external-add-user-tanah-basah-basic-outline-tanah-basah-2"/>
-                <span>친구추가</span>
+                <img className="plus-friend" src={Plus} alt="Plus"/>
             </li>
         </ul>
         <ul>
             <li>
-                <h1>Online</h1>
+                <h2 className="state">온라인</h2>
                 <h3>think0507</h3>
             </li>
+        </ul>
+        <ul>
             <li>
-                <h1>Offline</h1>
+                <h2 className="state-off">오프라인</h2>
                 <h3>dongwook1234</h3>
             </li>
         </ul>

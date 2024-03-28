@@ -5,10 +5,24 @@
   width: 250px;
   height: 100%;
   background-color: #424242;
-  border-right: 1px solid #e9ecef;
   z-index: 1000;
   overflow-y: auto;
 }
 li{
   color : white;
+}
+.left-list{
+  list-style-type:none;
+}
+
+.user-img{
+  width: 30px;
+  margin-right: 20px;
+}
+.menu {
+  color: white;
+  text-decoration: none;
+  margin-top: 10px;
+  line-height: 3;
+  list-style-type:none;
 }

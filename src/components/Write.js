@@ -46,7 +46,7 @@ function Write() {
             // 기타 필요한 정보 추가
         };
 
-        console.log(newPost);
+
         // PostContext를 통해 새로운 게시글 추가
         addPost(newPost);
 
